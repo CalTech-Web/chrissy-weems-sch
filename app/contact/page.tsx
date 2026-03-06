@@ -23,15 +23,16 @@ export default function Contact() {
                 src="/images/campus.jpg"
                 alt="College campus building"
                 fill
+                sizes="(max-width: 1160px) 100vw, 1160px"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-navy/40" />
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
             {/* Contact Info */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="md:col-span-2 space-y-6">
               <ScrollReveal>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
                   Get in Touch
@@ -79,7 +80,7 @@ export default function Contact() {
             </div>
 
             {/* Form */}
-            <div className="lg:col-span-3">
+            <div className="md:col-span-3">
               <ScrollReveal delay={1}>
                 <div className="bg-white rounded-xl shadow-lg p-8 md:p-10 border border-gray-100">
                   <h3 className="text-xl font-bold text-gray-800 mb-6">Send a Message</h3>

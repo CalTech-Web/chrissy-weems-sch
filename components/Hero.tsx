@@ -18,28 +18,28 @@ export default function Hero({ title, subtitle, ctaText, ctaHref, compact }: Her
         animation: "gradient-shift 8s ease infinite",
       }}
     >
-      {/* Floating decorative circles */}
+      {/* Floating decorative circles - hidden on mobile for performance */}
       <div
-        className="absolute w-64 h-64 rounded-full opacity-10 bg-white"
+        className="absolute w-64 h-64 rounded-full opacity-10 bg-white hidden md:block"
         style={{ top: "10%", left: "5%", animation: "float 6s ease-in-out infinite" }}
       />
       <div
-        className="absolute w-40 h-40 rounded-full opacity-10 bg-white"
+        className="absolute w-40 h-40 rounded-full opacity-10 bg-white hidden md:block"
         style={{ top: "60%", right: "10%", animation: "float 8s ease-in-out infinite 1s" }}
       />
       <div
-        className="absolute w-24 h-24 rounded-full opacity-10 bg-white"
+        className="absolute w-24 h-24 rounded-full opacity-10 bg-white hidden md:block"
         style={{ bottom: "20%", left: "20%", animation: "float 7s ease-in-out infinite 2s" }}
       />
       <div
-        className="absolute w-32 h-32 rounded-full opacity-5 bg-white"
+        className="absolute w-32 h-32 rounded-full opacity-5 bg-white hidden md:block"
         style={{ top: "15%", right: "25%", animation: "float 9s ease-in-out infinite 0.5s" }}
       />
 
       <div className="relative z-10 px-6 max-w-4xl">
         <h1
           className={`font-[family-name:var(--font-arizonia)] text-white drop-shadow-lg ${
-            compact ? "text-4xl md:text-6xl" : "text-5xl md:text-7xl lg:text-8xl"
+            compact ? "text-3xl md:text-6xl" : "text-4xl md:text-7xl lg:text-8xl"
           }`}
         >
           {title}

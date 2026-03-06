@@ -101,7 +101,7 @@ export default function Home() {
             <ScrollReveal delay={1}>
               <div className="max-w-2xl mx-auto relative">
                 <span className="absolute -top-6 -left-2 text-8xl text-teal/15 font-serif leading-none select-none">&ldquo;</span>
-                <blockquote className="bg-white rounded-xl px-10 py-10 shadow-md border border-gray-100 text-center">
+                <blockquote className="bg-white rounded-xl px-6 py-8 md:px-10 md:py-10 shadow-md border border-gray-100 text-center">
                   <p className="text-xl md:text-2xl text-gray-700 italic leading-relaxed">
                     Share an adversity in your life that you have fought to overcome and what you
                     have learned from it.
@@ -167,6 +167,7 @@ export default function Home() {
             src="/images/student-studying.jpg"
             alt="Student studying and writing an essay at a desk"
             fill
+            sizes="100vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-navy/60 flex items-center justify-center">
