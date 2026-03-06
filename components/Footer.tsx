@@ -81,7 +81,19 @@ export default function Footer() {
 
           {/* Bottom bar */}
           <div className="border-t border-white/10 pt-6 text-center text-sm">
-            <p>&copy; Chrissy Weems Scholarship. All Rights Reserved.</p>
+            <p>
+              &copy; Chrissy Weems Scholarship. All Rights Reserved.
+              <span className="mx-2">|</span>
+              Built by{" "}
+              <a
+                href="http://caltechweb.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal hover:text-white transition-colors"
+              >
+                CalTech Web
+              </a>
+            </p>
           </div>
         </div>
       </footer>

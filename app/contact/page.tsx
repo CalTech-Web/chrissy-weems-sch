@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import ScrollReveal from "@/components/ScrollReveal";
 import { MapPin, Mail, Award } from "lucide-react";
@@ -15,6 +16,19 @@ export default function Contact() {
 
       <main className="py-20">
         <div className="max-w-[1160px] mx-auto px-6 md:px-10">
+          {/* Campus banner */}
+          <ScrollReveal>
+            <div className="relative h-[200px] md:h-[280px] rounded-2xl overflow-hidden shadow-lg mb-14">
+              <Image
+                src="/images/campus.jpg"
+                alt="College campus building"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-navy/40" />
+            </div>
+          </ScrollReveal>
+
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
             {/* Contact Info */}
             <div className="lg:col-span-2 space-y-6">

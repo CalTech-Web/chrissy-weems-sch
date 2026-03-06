@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import ScrollReveal from "@/components/ScrollReveal";
 import { GraduationCap, FileText, Calendar, Clock, CheckCircle, Trophy } from "lucide-react";
@@ -17,16 +18,27 @@ export default function Home() {
         <section className="bg-teal-50 py-20">
           <div className="max-w-[1160px] mx-auto px-6 md:px-10">
             <ScrollReveal>
-              <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-teal mb-6">
-                  About the Scholarship
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  The Chrissy Weems Scholarship was created to help the future entrepreneurs and small
-                  business owners of our world. High school seniors accepted to colleges and current
-                  college students are encouraged to apply for this $1,000 award, requiring a 500-word
-                  essay submission.
-                </p>
+              <div className="flex flex-col md:flex-row items-center gap-10">
+                <div className="md:w-1/2">
+                  <h2 className="text-3xl md:text-4xl font-bold text-teal mb-6">
+                    About the Scholarship
+                  </h2>
+                  <p className="text-gray-600 text-lg leading-relaxed">
+                    The Chrissy Weems Scholarship was created to help the future entrepreneurs and small
+                    business owners of our world. High school seniors accepted to colleges and current
+                    college students are encouraged to apply for this $1,000 award, requiring a 500-word
+                    essay submission.
+                  </p>
+                </div>
+                <div className="md:w-1/2">
+                  <Image
+                    src="/images/graduation.jpg"
+                    alt="Students celebrating graduation by throwing caps in the air"
+                    width={800}
+                    height={533}
+                    className="rounded-2xl shadow-lg w-full h-auto"
+                  />
+                </div>
               </div>
             </ScrollReveal>
           </div>
@@ -145,6 +157,26 @@ export default function Home() {
                   <p className="text-xl font-bold text-gray-800">Two Weeks</p>
                 </div>
               </ScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Student studying banner */}
+        <section className="relative h-[300px] md:h-[400px] overflow-hidden">
+          <Image
+            src="/images/student-studying.jpg"
+            alt="Student studying and writing an essay at a desk"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-navy/60 flex items-center justify-center">
+            <div className="text-center px-6">
+              <h2 className="font-[family-name:var(--font-arizonia)] text-3xl md:text-5xl text-white mb-4">
+                Your Future Starts Here
+              </h2>
+              <p className="text-white/80 text-lg max-w-xl mx-auto">
+                Submit your 500-word essay and take the first step toward your $1,000 scholarship.
+              </p>
             </div>
           </div>
         </section>
