@@ -58,8 +58,8 @@ export default function Home() {
             </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-              <ScrollReveal delay={1}>
-                <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <ScrollReveal delay={1} className="h-full">
+                <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full">
                   <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mb-5">
                     <GraduationCap size={28} className="text-teal" />
                   </div>
@@ -69,8 +69,8 @@ export default function Home() {
                   </p>
                 </div>
               </ScrollReveal>
-              <ScrollReveal delay={2}>
-                <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <ScrollReveal delay={2} className="h-full">
+                <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full">
                   <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mb-5">
                     <GraduationCap size={28} className="text-teal" />
                   </div>
