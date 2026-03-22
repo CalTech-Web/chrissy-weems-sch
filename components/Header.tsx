@@ -50,10 +50,10 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="/#apply"
+            href="/contact"
             className="ml-2 bg-gold hover:bg-gold-dark text-white font-semibold uppercase tracking-wide text-xs px-6 py-2.5 rounded-full transition-all duration-300 hover:scale-105"
           >
-            Apply Now
+            Contact Us
           </Link>
         </nav>
 
@@ -85,11 +85,11 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="/#apply"
+            href="/contact"
             onClick={() => setOpen(false)}
             className="inline-block mt-2 bg-gold hover:bg-gold-dark text-white font-semibold uppercase tracking-wide text-xs px-6 py-2.5 rounded-full transition-colors"
           >
-            Apply Now
+            Contact Us
           </Link>
         </nav>
       </div>

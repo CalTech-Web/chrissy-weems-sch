@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import Hero from "@/components/Hero";
 import ScrollReveal from "@/components/ScrollReveal";
-import { GraduationCap, FileText, Calendar, Clock, CheckCircle, Trophy } from "lucide-react";
+import { GraduationCap, FileText, CheckCircle, Info } from "lucide-react";
 
 export default function Home() {
   return (
@@ -9,13 +10,13 @@ export default function Home() {
       <Hero
         title="Chrissy Weems Scholarship"
         subtitle="Empowering the next generation of entrepreneurs and small business owners through a $1,000 annual award."
-        ctaText="Apply Now"
-        ctaHref="#apply"
+        ctaText="Learn More"
+        ctaHref="#about"
       />
 
       <main>
         {/* About the Scholarship */}
-        <section className="bg-teal-50 py-20">
+        <section id="about" className="bg-teal-50 py-20">
           <div className="max-w-[1160px] mx-auto px-6 md:px-10">
             <ScrollReveal>
               <div className="flex flex-col md:flex-row items-center gap-10">
@@ -117,47 +118,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Key Deadlines */}
+        {/* Application Status */}
         <section className="py-20">
           <div className="max-w-[1160px] mx-auto px-6 md:px-10">
             <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-teal mb-10 text-center">
-                <span className="inline-flex items-center gap-3">
-                  <Calendar size={32} />
-                  Key Deadlines
-                </span>
-              </h2>
+              <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 border border-gray-100 text-center">
+                <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Info size={32} className="text-teal" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-teal mb-4">
+                  Applications Are Currently Closed
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                  The application period for the Chrissy Weems Scholarship is currently closed. Please check back regularly for updates on the next application cycle.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold uppercase tracking-wider text-sm px-10 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+                >
+                  Contact Us for Updates
+                </Link>
+              </div>
             </ScrollReveal>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <ScrollReveal delay={1}>
-                <div className="bg-white rounded-xl p-8 shadow-md border border-gray-100 text-center">
-                  <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Calendar size={24} className="text-teal" />
-                  </div>
-                  <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">Submission Deadline</p>
-                  <p className="text-xl font-bold text-gray-800">February 28, 2019</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={2}>
-                <div className="bg-white rounded-xl p-8 shadow-md border border-gray-100 text-center">
-                  <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Trophy size={24} className="text-teal" />
-                  </div>
-                  <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">Winner Selection</p>
-                  <p className="text-xl font-bold text-gray-800">March 2019</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={3}>
-                <div className="bg-white rounded-xl p-8 shadow-md border border-gray-100 text-center">
-                  <div className="w-14 h-14 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Clock size={24} className="text-teal" />
-                  </div>
-                  <p className="text-sm text-gray-500 uppercase tracking-wide mb-1">Response Period</p>
-                  <p className="text-xl font-bold text-gray-800">Two Weeks</p>
-                </div>
-              </ScrollReveal>
-            </div>
           </div>
         </section>
 
@@ -176,79 +158,9 @@ export default function Home() {
                 Your Future Starts Here
               </h2>
               <p className="text-white/80 text-lg max-w-xl mx-auto">
-                Submit your 500-word essay and take the first step toward your $1,000 scholarship.
+                Stay tuned for the next opportunity to apply for the $1,000 Chrissy Weems Scholarship.
               </p>
             </div>
-          </div>
-        </section>
-
-        {/* Application Form */}
-        <section id="apply" className="bg-teal-50 py-20">
-          <div className="max-w-[1160px] mx-auto px-6 md:px-10">
-            <ScrollReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-teal mb-10 text-center">
-                Apply Now
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={1}>
-              <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12 border border-gray-100">
-                <form className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block mb-1.5 font-semibold text-sm text-gray-700">
-                      Your Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block mb-1.5 font-semibold text-sm text-gray-700">
-                      Your Email <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="block mb-1.5 font-semibold text-sm text-gray-700">
-                      Subject
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="essay" className="block mb-1.5 font-semibold text-sm text-gray-700">
-                      Your Essay (500 words) <span className="text-red-500">*</span>
-                    </label>
-                    <textarea
-                      id="essay"
-                      name="essay"
-                      rows={12}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-teal focus:ring-2 focus:ring-teal/20 transition-all resize-y"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-teal hover:bg-teal-dark text-white font-semibold uppercase tracking-wide text-sm py-4 rounded-lg transition-all duration-300 hover:shadow-lg cursor-pointer"
-                  >
-                    Submit Application
-                  </button>
-                </form>
-              </div>
-            </ScrollReveal>
           </div>
         </section>
       </main>

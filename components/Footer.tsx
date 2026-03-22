@@ -8,16 +8,16 @@ export default function Footer() {
       <section className="relative overflow-hidden bg-gradient-to-r from-teal-deeper via-teal to-teal-dark py-16 text-center">
         <div className="max-w-[1160px] mx-auto px-6 md:px-10">
           <h2 className="font-[family-name:var(--font-arizonia)] text-3xl md:text-5xl text-white mb-4">
-            Ready to Apply?
+            Stay Connected
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Take the first step toward your future. Submit your application for the $1,000 Chrissy Weems Scholarship today.
+            Applications are currently closed. Check back regularly for updates on the next Chrissy Weems Scholarship cycle.
           </p>
           <Link
-            href="/#apply"
+            href="/contact"
             className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-white font-semibold uppercase tracking-wider text-sm px-10 py-4 rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
           >
-            Start Your Application <ArrowRight size={18} />
+            Contact Us <ArrowRight size={18} />
           </Link>
         </div>
       </section>
@@ -52,7 +52,7 @@ export default function Footer() {
                   <Link href="/contact" className="hover:text-teal transition-colors">Contact Us</Link>
                 </li>
                 <li>
-                  <Link href="/#apply" className="hover:text-teal transition-colors">Apply Now</Link>
+                  <Link href="/contact" className="hover:text-teal transition-colors">Contact Us</Link>
                 </li>
               </ul>
             </div>
